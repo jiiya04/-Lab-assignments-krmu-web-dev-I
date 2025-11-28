@@ -1,0 +1,258 @@
+/*  Portfolio Styling */
+
+body{
+  margin: 0;
+  font-family: 'Poppins';
+  color: #222222;
+  background: linear-gradient(180deg, #f7fbff 0%, #f2f6fb 100%);
+
+}
+
+/* Container sizing */
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: linear-gradient(90deg,#1742a1, #0f2b7a);
+  color: white;
+  padding: 0.85rem 0;
+  box-shadow: 0 6px 18px rgba(10,20,50,0.12);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header h1{
+  font-size: 1.1rem;
+  font-weight:600;
+  margin:0;
+  letter-spacing: 0.3px;
+}
+nav{
+  display:flex;
+  gap: 0.25rem;
+  align-items:center;
+  flex-wrap:wrap;
+}
+nav a{
+  color: rgba(255,255,255,0.95);
+  text-decoration:none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: transform 250ms ease, background 250ms ease, color 250ms ease;
+}
+nav a:hover,
+nav a:focus{
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* Section base style */
+section{
+  background: none;
+  margin: 1.25rem auto;
+  padding: 0;
+  border-radius: 0.75rem;
+}
+.section-card{
+  background: #ffffff;
+  padding: 1.15rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(15,30,80,0.06);
+}
+
+/* Section heading */
+.section-header{
+  display:flex;
+  align-items:end;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.section-header h2{
+  margin:0;
+  color: #1742a1;
+  font-size: 1.15rem;
+  border-bottom: 3px solid rgba(58,160,255,0.12);
+  padding-bottom: 0.25rem;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  gap: 1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(23,66,161,0.04), transparent 60%);
+  border-radius: 0.75rem;
+}
+.hero .intro{
+  flex: 1 1 55%;
+  min-width: 0;
+}
+.hero h3{
+  margin:0 0 0.4rem 0;
+  font-size: 1rem;
+  font-weight:600;
+  color: #0b2a66;
+}
+.hero h1{
+  margin:0 0 0.4rem 0;
+  font-size: 1.75rem;
+  line-height:1.05;
+  font-weight:700;
+}
+.title-accent{
+  display:inline-block;
+  padding: 0.08rem 0.35rem;
+  border-radius: 0.35rem;
+  font-weight:700;
+  animation: accent-color 3s infinite linear;
+  color: white;
+  background: #3aa0ff;
+}
+@keyframes accent-color{
+  0%{ color: white; background: #3aa0ff; transform: translateY(0); }
+  50%{ color: #1742a1; background: #cfefff; transform: translateY(-3px); }
+  100%{ color: white; background: #3aa0ff; transform: translateY(0); }
+}
+.hero p{
+  margin:0.6rem 0 0;
+  color: #333333;
+  font-size: 0.98rem;
+}
+
+/* Profile image */
+.hero .profile{
+  flex: 0 0 140px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.hero .profile img{
+  width: 140px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  border: 4px solid rgba(58,160,255,0.12);
+  box-shadow: 0 6px 20px rgba(15,30,80,0.08);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+/* Skills grid */
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+.skill-card{
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  padding: 0.85rem;
+  border-radius: 0.6rem;
+  text-align:center;
+  border: 1px solid rgba(15,30,80,0.04);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.skill-card h4{ margin:0 0 0.35rem 0; font-size: 0.95rem; color: #1742a1; }
+.skill-card p{ margin:0; font-size: 0.88rem; color:#444444; }
+.skill-card:hover{ transform: translateY(-6px); box-shadow: 0 14px 30px rgba(15,30,80,0.06); }
+
+/* Projects grid */
+.projects-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+.project-card{
+  padding: 0.9rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(180deg,#fff,#f9fbff);
+  border: 1px solid rgba(15,30,80,0.04);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.project-card h3{ margin:0 0 0.35rem 0; font-size: 1rem; color: #06306a; }
+.project-card p{ margin:0; color:#444444; }
+.project-card:hover{ transform: translateY(-8px) scale(1.01); box-shadow: 0 18px 40px rgba(10,30,80,0.08); }
+
+/* Contact form */
+form{
+  display:block;
+  gap: 0.6rem;
+}
+.form-row{ margin-bottom: 0.6rem; }
+label { display:block; margin-bottom:0.25rem; font-size:0.9rem; color:#243a5f; }
+input[type="text"],
+input[type="email"],
+textarea{
+  width:100%;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(10,20,40,0.08);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #ffffff;
+  transition: box-shadow 250ms ease, transform 250ms ease;
+}
+input:focus, textarea:focus{
+  outline: none;
+  box-shadow: 0 6px 20px rgba(58,160,255,0.12);
+  transform: translateY(-2px);
+}
+button{
+  background: #1742a1;
+  color: white;
+  border: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.45rem;
+  cursor: pointer;
+  font-weight:600;
+  transition: transform 250ms ease, background 250ms ease;
+}
+button:hover{ transform: translateY(-3px); background: #0b2a66; }
+button:focus{ outline: 3px solid rgba(58,160,255,0.18); }
+
+/* Footer */
+footer{
+  text-align:center;
+  padding: 1rem 0;
+  color:#4a4a4a;
+  font-size: 0.9rem;
+}
+
+/* Fade-in sections */
+@keyframes fadeInUp{
+  from{ opacity: 0; transform: translateY(12px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+.section-card{ animation: fadeInUp 550ms ease both; }
+
+/* Responsive breakpoints */
+@media (min-width: 600px){
+  .skills-grid{ grid-template-columns: repeat(3,1fr); }
+  .projects-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 880px){
+  header .container{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .hero{ padding: 1.6rem; }
+  .hero h1{ font-size: 2.2rem; }
+  .hero .profile{ flex:0 0 180px; }
+  .hero .profile img{ width: 180px; height: 230px; }
+  .skills-grid{ grid-template-columns: repeat(4,1fr); }
+  .projects-grid{ grid-template-columns: repeat(3,1fr); }
+}
+
+@media (min-width: 1400px){
+  .container{ width: 85%; max-width: 1300px; }
+}
